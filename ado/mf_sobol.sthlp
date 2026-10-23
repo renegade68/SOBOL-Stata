@@ -134,3 +134,15 @@ or seek. Use stateful generation to amortize initialization cost.
 
 {pstd}See {help sobol} for balance, endpoint, and double-storage considerations.
 For replicated integration of a user-defined function, see {help mf_sobol_integrate}.
+
+{title:Implementation references}
+
+{pstd}The generator recurrence and direction data follow
+{browse "https://web.maths.unsw.edu.au/~fkuo/sobol/":Joe and Kuo's Sobol project and notes}.
+The private scrambling PRNG adapts
+{browse "https://math.sci.hiroshima-u.ac.jp/m-mat/MT/MT2002/emt19937ar.html":Matsumoto and Nishimura's 2002 MT19937 reference code};
+the original notice is retained in _sobol_mt19937.mata.
+
+{pstd}{browse "https://docs.scipy.org/doc/scipy-1.13.1/reference/generated/scipy.stats.qmc.Sobol.html":SciPy 1.13.1 qmc.Sobol}
+was used as a sequence-validation reference with aligned configurations.
+It is not a runtime dependency. Matching a numeric seed alone is insufficient.

@@ -182,5 +182,20 @@ or recreate exactly the same plan in a fresh session:
 {phang2}{cmd:mata: fit.ST}
 {phang2}{cmd:mata: fit.se}
 
+{title:References}
+
+{pstd}Saltelli et al. 2010. Variance based sensitivity analysis of model output.
+Design and estimator for the total sensitivity index. Computer Physics
+Communications 181: 259-270.
+{browse "https://doi.org/10.1016/j.cpc.2009.09.018":doi:10.1016/j.cpc.2009.09.018}.
+
+{pstd}The point estimators were checked against
+{browse "https://github.com/SALib/SALib/blob/6fb0a9c144692be5993e50dc99575eab44c192be/src/SALib/analyze/sobol.py":SALib 1.5.1's Sobol analyzer}.
+SALib software references are
+{browse "https://doi.org/10.21105/joss.00097":Herman and Usher (2017), JOSS 2(9):97}, and
+{browse "https://doi.org/10.18174/sesmo.18155":Iwanaga, Usher and Herman (2022), Socio-Environmental Systems Modelling 4:18155}.
+SALib is not required at runtime. This package uses between-scramble t intervals;
+it does not reproduce SALib's within-design bootstrap confidence intervals.
+
 {title:Also see}
 {pstd}{help mf_sobol}, {help mf_sobol_integrate}, {help sobol}

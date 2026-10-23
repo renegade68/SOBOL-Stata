@@ -148,6 +148,23 @@ Checks include aligned SciPy sequence references, streaming and RNG behavior,
 integration examples, analytic sensitivity models, and external-model exchange.
 They do not establish accuracy or speed for every application.
 
+## Sources and related Stata work
+
+| Role in this package | Source |
+| --- | --- |
+| Direction numbers and generator recurrence | [Joe and Kuo's data and algorithm notes](https://web.maths.unsw.edu.au/~fkuo/sobol/), including [Joe and Kuo (2008)](https://doi.org/10.1137/070709359) |
+| Private MT19937 adaptation used for scrambling | [Matsumoto and Nishimura's 2002 reference code](https://math.sci.hiroshima-u.ac.jp/m-mat/MT/MT2002/emt19937ar.html); its notice is retained in `ado/_sobol_mt19937.mata` |
+| Sequence validation reference | [SciPy 1.13.1 `qmc.Sobol`](https://docs.scipy.org/doc/scipy-1.13.1/reference/generated/scipy.stats.qmc.Sobol.html), with aligned direction numbers, bit depth and scramble configuration |
+| Sensitivity estimators and validation reference | [Saltelli et al. (2010)](https://doi.org/10.1016/j.cpc.2009.09.018) and [SALib 1.5.1's Sobol analyzer](https://github.com/SALib/SALib/blob/6fb0a9c144692be5993e50dc99575eab44c192be/src/SALib/analyze/sobol.py); see the [SALib citation guidance](https://salib.readthedocs.io/en/latest/citations.html) |
+
+Related Stata/Mata quasi-Monte Carlo work includes
+[Drukker and Gates (2006)](https://www.stata-journal.com/article.html?article=st0103)
+on Halton/Hammersley sets and [Kolenikov (2012)](https://doi.org/10.1177/1536867X1201200103)
+on scrambled Halton sequences. These are related methods, not Sobol code used by
+this package. No claim of being the first Stata Sobol implementation is made.
+SciPy and SALib are development references, not runtime dependencies; their
+seeding and confidence-interval conventions need not match this package.
+
 ## Feedback and license
 
 For a problem report, use [GitHub Issues](https://github.com/renegade68/SOBOL-Stata/issues).

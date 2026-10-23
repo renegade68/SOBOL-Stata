@@ -116,6 +116,7 @@ sobol_seed and sobol_prng characteristics.
 
 {pstd}Joe, S., and F. Y. Kuo. 2008. Constructing Sobol sequences with better
 two-dimensional projections. SIAM Journal on Scientific Computing 30: 2635-2654.
+{browse "https://doi.org/10.1137/070709359":doi:10.1137/070709359}.
 
 {pstd}{browse "https://web.maths.unsw.edu.au/~fkuo/sobol/":Joe-Kuo direction numbers and algorithm notes}.
 Direction data are distributed under their BSD-style license, reproduced in
@@ -123,6 +124,15 @@ the generated source and JOE_KUO_LICENSE.txt at the repository root.
 
 {pstd}Owen, A. B. On dropping the first Sobol' point.
 {browse "https://arxiv.org/abs/2008.08051":arXiv:2008.08051}.
+
+{pstd}Related Stata/Mata quasi-Monte Carlo work (Halton, not a source of this
+package's Sobol code):
+{browse "https://www.stata-journal.com/article.html?article=st0103":Drukker and Gates (2006), Generating Halton sequences using Mata},
+Stata Journal 6: 214-228; and
+{browse "https://doi.org/10.1177/1536867X1201200103":Kolenikov (2012), Scrambled Halton sequences in Mata},
+Stata Journal 12: 29-44.
+See {help mf_sobol} for implementation references and
+{help mf_sobol_sensitivity} for sensitivity references.
 
 {title:Also see}
 {pstd}{help mf_sobol}, {help mf_sobol_integrate}, {help mf_sobol_sensitivity}, {help mf_halton}
