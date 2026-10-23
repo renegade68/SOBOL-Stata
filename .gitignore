@@ -1,0 +1,19 @@
+# Keep this repository limited to the user distribution.
+*
+!.gitignore
+!README.md
+!LICENSE
+!JOE_KUO_LICENSE.txt
+!ado/
+ado/*
+!ado/sobol.ado
+!ado/sobol_setup.ado
+!ado/_sobol_direction_data.mata
+!ado/_sobol_mt19937.mata
+!ado/sobol.mata
+!ado/sobol_rqmc.mata
+!ado/sobol_sa.mata
+!ado/sobol.sthlp
+!ado/mf_sobol.sthlp
+!ado/mf_sobol_integrate.sthlp
+!ado/mf_sobol_sensitivity.sthlp
